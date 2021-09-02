@@ -50,7 +50,7 @@ python3 niro.py <IP Target>
 ### PORT SCANNING
 ### SSH BRUTE FORCE
 
-# Some Pictures :
+# :boom: Some Pictures :boom:
 
 there's some pictures of NIRO :
 
