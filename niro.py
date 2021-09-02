@@ -112,7 +112,7 @@ def ssh_connect(password, code=0):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
-       ssh.connect(ip ,port=22,username = username, password=password)
+       ssh.connect( sys.argv[1] ,port=22,username = username, password=password)
     except paramiko.AuthenticationException :
        code = 1
     ssh.close()
