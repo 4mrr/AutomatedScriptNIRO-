@@ -1,6 +1,7 @@
 import pyfiglet
 import socket,requests,datetime
 import os,sys
+import paramiko
 
 
 intro1 = pyfiglet.figlet_format("--->\\NIRO/<---")
