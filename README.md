@@ -30,14 +30,14 @@ sudo apt-get install python3.8
 ```
 depending on the version of the machine used
 
-and then download the raw of script with the command line linux :
+and then download the script with the command line linux :
 ```bash
-wget https://raw.githubusercontent.com/amr-en-niari/ScriptAutomatis-/main/niro.py
+https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/niro.py
 ```
-and you should to download also the word list of subdomains and directory by the command line linux :
+and you can download also the wordlist of subdomains and directory by the command line linux for using them in the script or use another wordlist :
 ```bash
-wget https://raw.githubusercontent.com/amr-en-niari/ScriptAutomatis-/main/subdomains.txt
-wget https://raw.githubusercontent.com/amr-en-niari/ScriptAutomatis-/main/directory-list-2.3-medium.txt
+https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/subdomains.txt
+https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/directory-list-2.3-medium.txt
 ```
 and at the end to run the script you have to write the command line :
 ```bash
