@@ -1,6 +1,14 @@
 # ScriptAutomatis-
  
-<h3 align="center">Summary</h3>
+ 
+Created By  : EN-NIARI AMR 
+Framed By   : EL Mostapha chakir
+Inspired By : ReconFTW & Black-Dragon & SN1PER 
+
+ 
+ 
+ 
+<h3 align="center">Description</h3>
  
 **NIRO** automates the entire process of reconnaisance for you.
 
