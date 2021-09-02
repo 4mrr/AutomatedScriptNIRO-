@@ -50,3 +50,17 @@ python3 niro.py <IP Target>
 ### PORT SCANNING
 ### SSH BRUTE FORCE
 
+# Simple Usage :
+
+there's some pictures of NIRO :
+
+*Search Directory :
+
+![Screenshot (790)](https://user-images.githubusercontent.com/65505262/131858776-42cd50fa-3708-4b23-9df0-1e7ddc55a21b.png)
+
+*Port Scanning :
+
+![Screenshot (791)](https://user-images.githubusercontent.com/65505262/131859206-0768523b-1dec-4b11-a4c8-8a3c3f56e929.png)
+
+*SUB DOMAINS
+
