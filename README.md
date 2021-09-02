@@ -32,12 +32,12 @@ depending on the version of the machine used
 
 and then download the script with the command line linux :
 ```bash
-https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/niro.py
+wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/niro.py
 ```
 and you can download also the wordlist of subdomains and directory by the command line linux for using them in the script or use another wordlist :
 ```bash
-https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/subdomains.txt
-https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/directory-list-2.3-medium.txt
+wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/subdomains.txt
+wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/directory-list-2.3-medium.txt
 ```
 and at the end to run the script you have to write the command line :
 ```bash
