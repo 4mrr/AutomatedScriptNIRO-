@@ -1,5 +1,6 @@
 # ScriptAutomatis-
  
+![Supported Python versions](https://img.shields.io/badge/python-3.7+-blue.svg)
  
 Created By  : EN-NIARI AMR </br>
 Framed By   : EL Mostapha chakir </br>
