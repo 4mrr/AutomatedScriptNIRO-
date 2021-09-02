@@ -14,7 +14,7 @@ So, what are you waiting for Go!  :boom:
 
 
 # 💿 Installation:
-**Niro** is a script of python3, so first of all you have to doanload python version > 3 :
+**Niro** is a script of python3, so first of all you have to download python version > 3 :
 
 ```bash
 sudo apt-get update
