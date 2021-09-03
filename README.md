@@ -22,7 +22,7 @@ It also performs SSH brute force, because it is one of the most reliable ways to
 So, what are you waiting for Go!  :boom:
 
 
-# 💿 Installation:
+# 💿 Installation 💿 :
 **Niro** is a script of python3, so first of all you have to download python version > 3 :
 
 ```bash
