@@ -63,20 +63,26 @@ python3 niro.py <IP Target>
 #### SSH Brute Force
 #### FTP Brute Force
 
-# :boom: Some Pictures :boom:
+# :boom: Simple Usage :boom:
 
 there's some pictures of NIRO :
 
+* Sub domain :
+
+![Screenshot (793)](https://user-images.githubusercontent.com/65505262/132023360-30a2ec10-f7d5-403a-ad51-b18ac36b1211.png)
+
 * Search Directory :
 
-![Screenshot (790)](https://user-images.githubusercontent.com/65505262/131885539-1a6f1c3d-f651-4868-a8e1-82389aad9121.png)
+![Screenshot (794)](https://user-images.githubusercontent.com/65505262/132024338-a5df8060-640f-4a27-8be4-b7963eca4f74.png)
 
 
 * Port Scanning :
 
-![Screenshot (791)](https://user-images.githubusercontent.com/65505262/131859206-0768523b-1dec-4b11-a4c8-8a3c3f56e929.png)
+![Screenshot (795)](https://user-images.githubusercontent.com/65505262/132029006-7c8caa8c-0fed-437d-abd9-93ac2c596588.png)
+
 
 * SSH Brute Force :
 
-![Screenshot (792)](https://user-images.githubusercontent.com/65505262/131885627-af0e3f50-5397-4a76-9478-93f4b20e72d1.png)
+![Screenshot (796)](https://user-images.githubusercontent.com/65505262/132029087-bdc82cf2-8232-43f5-908c-7a4d42af6652.png)
+
 
