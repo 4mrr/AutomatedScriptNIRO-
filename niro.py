@@ -1,7 +1,9 @@
 import pyfiglet
 import socket,requests
 from datetime import datetime
-import os,sys
+import sys
+import os.path
+from os import path
 import paramiko
 from colorama import Fore
 
