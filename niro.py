@@ -153,7 +153,7 @@ if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then cont
                     print(Fore.YELLOW+"[!] ACCOUNT CHECK : [SSH] Host : "+sys.argv[1]+" Login : "+username+"/"+password)
                     if (res==0) :
                         print(Fore.GREEN+"[+] ACCOUNT FOUND : [SSH] Host : "+sys.argv[1]+" Login : "+username+"/"+password+" [SUCCESS]")
-                        exit(0)
+                        break
                 except Exception as e :
                         print(e)
                         pass
@@ -186,7 +186,7 @@ def ftp_login(ip,username_ftp,passwd):
         ftp.login(username_ftp, passwd)
         ftp.quit()
         print(Fore.GREEN+"[!] ACCOUNT FOUND : [FTP] Host : "+sys.argv[1]+" Login : "+username_ftp+"/"+word+"[SUCCESS]")
-        exit(0)
+        break
     except:
         pass
 
