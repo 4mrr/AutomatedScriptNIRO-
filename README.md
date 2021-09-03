@@ -83,6 +83,11 @@ there's some pictures of NIRO :
 
 * SSH Brute Force :
 
-![Screenshot (796)](https://user-images.githubusercontent.com/65505262/132029087-bdc82cf2-8232-43f5-908c-7a4d42af6652.png)
+![Screenshot (798)](https://user-images.githubusercontent.com/65505262/132051333-e7a0a1bf-d46e-4f0e-95ad-d17e978cf5af.png)
+
+
+* FTP Brute Force :
+
+![Screenshot (799)](https://user-images.githubusercontent.com/65505262/132051246-bc64f008-36be-416c-bf77-0c9b5055fb41.png)
 
 
