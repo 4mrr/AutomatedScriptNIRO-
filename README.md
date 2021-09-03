@@ -1,6 +1,6 @@
 # ScriptAutomatis-
  
-![Supported Python versions](https://img.shields.io/badge/python-3.7+-blue.svg)
+![Supported Python versions](https://img.shields.io/badge/python-3.8+-blue.svg)
  
 Created By  : EN-NIARI AMR </br>
 Framed By   : EL Mostapha chakir </br>
@@ -45,8 +45,9 @@ wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/ni
 ```
 and you can download also the wordlist of subdomains and directory by the command line linux for using them in the script or use another wordlist :
 ```bash
-wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/subdomains.txt
+wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/Subdomains.txt
 wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/directory-list-2.3-medium.txt
+
 ```
 and at the end to run the script you have to write the command line :
 ```bash
@@ -57,7 +58,9 @@ python3 niro.py <IP Target>
 ### SUBDOMAINS
 ### SEARCH DIRECTORY ONLINE OF WEB
 ### PORT SCANNING
-### SSH BRUTE FORCE
+### PASSWORD SPRYING
+##### SSH Brute Force
+##### FTP Brute Force
 
 # :boom: Some Pictures :boom:
 
