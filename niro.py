@@ -23,11 +23,13 @@ print(Fore.YELLOW + "+ Type     :            SUBDOMAIN,search DIRECTORY ,PORT sc
 print(Fore.WHITE + "---------------------------------------------------------------------------------------")
 print("************************************************")
 print("\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/")
-print(Fore.CYAN + "[*-*] Starting NIRO in SUBDOMAIN enumeration mode ...")
 
+print(Fore.CYAN+"===========================================================")
+print(Fore.WHITE + "[*-*] Starting NIRO in SUBDOMAIN enumeration mode ...")
+print(Fore.CYAN+"===========================================================")
 
 s = pyfiglet.figlet_format("SUB-DOMAIN")
-print(s)
+print(Fore.MAGENTA+s)
 
 sub_file = str(input(Fore.BLUE+"[+] Enter subdomains file location : "+Fore.WHITE))
 sub_list = open(sub_file ,'r')
@@ -44,10 +46,13 @@ for sub in subdoms:
 sub_list.close()
 
 print(Fore.RED+"---------------END OF SUBDOMAIN ENUMERATION-----------------")
-print(Fore.CYAN+"[*-*] Starting NIRO in DIRECTORY enumeration mode ...")
 
-d = pyfiglet.figlet_format("DIRECTORY")
-print(d)
+print(Fore.CYAN+"===========================================================")
+print(Fore.WHITE+"[*-*] Starting NIRO in DIRECTORY enumeration mode ...")
+print(Fore.CYAN+"===========================================================")
+
+d = pyfiglet.figlet_format("Search<->DIRECTORY")
+print(Fore.MAGENTA+d)
 
 dir_file = input(Fore.BLUE+"[+] Enter directory name file location : ")
 
@@ -66,10 +71,12 @@ file.close()
 
 print(Fore.RED+"---------------END OF DIRECTORY ENUMERATION-----------------")
 
-print(Fore.CYAN + "[*-*] Starting NIRO in PORT SCANNING mode ...")
+print(Fore.CYAN+"===========================================================")
+print(Fore.WHITE + "[*-*] Starting NIRO in PORT SCANNING mode ...")
+print(Fore.CYAN+"===========================================================")
 
 p = pyfiglet.figlet_format("PORT-SCANNING")
-print(p)
+print(Fore.MAGENTA+p)
 
 open_ports=[]
 
@@ -99,11 +106,17 @@ if open_ports:
 else:
     print(Fore.RED+"[-] Looks like no ports are open") 
 
-print(Fore.WHITE+"---------------END OF PORT SCANNING-----------------")
-print(Fore.CYAN + "[*-*] Starting NIRO in SSH Brute force mode ...")
+print(Fore.RED+"---------------END OF PORT SCANNING-----------------")
 
-b = pyfiglet.figlet_format("SSH BruteForce")
-print(b)
+brute_force = pyfiglet.figlet_format("Password<->SPRYING")
+print(Fore.MAGENTA+brute_force)
+
+
+
+print(Fore.CYAN+"===========================================================")
+print(Fore.WHITE + "[*-*] Starting NIRO in SSH Brute force mode ...")
+print(Fore.CYAN+"===========================================================")
+
 
 username = str(input(Fore.BLUE+"[+] Enter Username : "+Fore.WHITE))
 password_file = input(Fore.BLUE+"[+] Enter password file location : "+Fore.WHITE)
@@ -146,12 +159,11 @@ if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then cont
 else:
         print(Fore.RED+"(-_-) PORT 22 CLOSED...")
 
-print(Fore.WHITE+"---------------END OF SSH BruteForce-----------------")
+print(Fore.RED+"---------------END OF SSH BruteForce-----------------")
 
-print(+Fore.CYAN+"[*-*] Starting NIRO in FTP Brute force mode ...")
-
-ftp = pyfiglet.figlet_format("FTP BruteForce")
-print(ftp)
+print(Fore.CYAN+"===========================================================")
+print(+Fore.WHITE+"[*-*] Starting NIRO in FTP Brute force mode ...")
+print(Fore.CYAN+"===========================================================")
 
 
 def anonymous(ip):
@@ -204,4 +216,4 @@ else :
     print(Fore.RED+"----------------------------")
     print("[!] 21/TCP FTP ---> CLOSED")
     print("----------------------------")
-print(Fore.WHITE+"---------------END OF FTP BruteForce-----------------")
+print(Fore.RED+"---------------END OF FTP BruteForce-----------------")
