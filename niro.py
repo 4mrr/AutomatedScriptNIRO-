@@ -43,8 +43,8 @@ if(path.exists(sub_file) == True):
      pass
    else:
      print(Fore.GREEN +"[+] --> Valid domain : ",sub_domains)
-
-sub_list.close()  
+ 
+ sub_list.close()  
 else:
   print(Fore.RED+"[-] INVALID FILE")
 
