@@ -45,9 +45,10 @@ wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/ni
 ```
 and you can download also the wordlist of subdomains and directory by the command line linux for using them in the script or use another wordlist :
 ```bash
-wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/Subdomains.txt
+wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/Subdomain.txt
 wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/directory-list-2.3-medium.txt
-
+wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/ftp_wordlist.txt
+wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/ssh_wordlist.txt
 ```
 and at the end to run the script you have to write the command line :
 ```bash
@@ -59,8 +60,8 @@ python3 niro.py <IP Target>
 ### SEARCH DIRECTORY ONLINE OF WEB
 ### PORT SCANNING
 ### PASSWORD SPRYING
-##### SSH Brute Force
-##### FTP Brute Force
+#### SSH Brute Force
+#### FTP Brute Force
 
 # :boom: Some Pictures :boom:
 
