@@ -16,9 +16,17 @@ Inspired By : ReconFTW & Black-Dragon & SN1PER </br>
 it is used in the phase of Footprinting & reconnaissance.
  
 NIRO uses lot of tactiques for reconnaissance for example : subdomain enumeration and search directory and ports scanning which helps you getting the maximum and the most interesting subdomains and directory so that you be ahead of the competition.   
-  
-It also performs SSH brute force, because it is one of the most reliable ways to gain SSH access to servers is by brute-forcing credentials. that will ultimately lead to the discovery of valid login credentials. 
+
+NIRO is intended to be a speedy, massively parallel, modular, login brute-forcer.The goal is to support two services that allow remote authentication as possible :
+
+#### SSH brute force attack :
+
+NIRO performs SSH brute force, because it is one of the most reliable ways to gain SSH access to servers is by brute-forcing credentials. that will ultimately lead to the discovery of valid login credentials. 
  
+#### FTP brute force attack :
+
+NIRO performs FTP brute force, because FTP (File Transfer Protocol ) is a network protocol used to transfer files, it is also the most way to gain access to FTP server for collectiong more informations. 
+
 So, what are you waiting for Go!  :boom:
 
 
