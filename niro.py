@@ -32,8 +32,8 @@ s = pyfiglet.figlet_format("SUB-DOMAIN")
 print(Fore.MAGENTA+s)
 
 sub_file = str(input(Fore.BLUE+"[+] Enter subdomains file location : "+Fore.WHITE))
-sub_list = open(sub_file ,'r')
-subdoms = sub_list.readlines()
+sub_list = open(sub_file).read()
+subdoms = sub_list.splitlines()
 for sub in subdoms:
    sub_domains = f"http://{sub}.{sys.argv[1]}"
    try :
@@ -56,8 +56,8 @@ print(Fore.MAGENTA+d)
 
 dir_file = input(Fore.BLUE+"[+] Enter directory name file location : ")
 
-directory = open(str(dir_file),'r')
-directory_name = directory.readlines()
+directory = open(str(dir_file)).read()
+directory_name = directory.splitlines()
 
 for dir in directory_name :
    dir_enum = f"http://{sys.argv[1]}/{dir}"
@@ -137,10 +137,9 @@ if probe_port(sys.argv[1],22) == 0:  #verification is port 22 open and then cont
         print(Fore.GREEN+" -----------------------")
         print("|   TCP PORT 22 OPEN    |")
         print(" -----------------------")
-        ssh_file = open(str(password_file), 'r')
-        ssh_line = ssh_file.readlines()   
+        ssh_file = open(str(password_file)).read()
+        ssh_line = ssh_file.splitlines()   
         for password in ssh_line:
-
                 try :
                     res = ssh_connect(password)
                     print('Trying : '+username+'/'+password)
@@ -192,8 +191,8 @@ def ftp_login(ip,username,password):
 
 def brute_force(ip, username, wordlist):
     try:
-        ftp_list = open(wordlist, 'r')
-        words = ftp_list.readlines()
+        ftp_list = open(wordlist).read()
+        words = ftp_list.splitlines()
         for word in words:
             word = word.strip()
             print(Fore.MAGENTA+'Trying : '+username+'/'+word)
