@@ -29,10 +29,9 @@ print(Fore.CYAN + "[*-*] Starting NIRO in SUBDOMAIN enumeration mode ...")
 s = pyfiglet.figlet_format("SUB-DOMAIN")
 print(s)
 
-sub_file = input(Fore.BLUE+"[+] Enter subdomains file location : ")
-sub_list = open(str(sub_file),'r')
+sub_file = str(input(Fore.BLUE+"[+] Enter subdomains file location : "+Fore.WHITE))
+sub_list = open(sub_file ,'r')
 subdoms = sub_list.readlines()
-
 for sub in subdoms:
    sub_domains = f"http://{sub}.{sys.argv[1]}"
    try :
