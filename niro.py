@@ -39,12 +39,12 @@ for sub in subdoms:
    except requests.ConnectionError:
      pass
    else:
-     print(FORE.GREEN +"[+] --> Valid domain : ",sub_domains)
+     print(Fore.GREEN +"[+] --> Valid domain : ",sub_domains)
 
 sub_list.close()
 
 print(Fore.RED+"---------------END OF SUBDOMAIN ENUMERATION-----------------")
-print(FORE.CYAN+"[*-*] Starting NIRO in DIRECTORY enumeration mode ...")
+print(Fore.CYAN+"[*-*] Starting NIRO in DIRECTORY enumeration mode ...")
 
 d = pyfiglet.figlet_format("DIRECTORY")
 print(d)
@@ -66,7 +66,7 @@ file.close()
 
 print(Fore.RED+"---------------END OF DIRECTORY ENUMERATION-----------------")
 
-print(FORE.CYAN + "[*-*] Starting NIRO in PORT SCANNING mode ...")
+print(Fore.CYAN + "[*-*] Starting NIRO in PORT SCANNING mode ...")
 
 p = pyfiglet.figlet_format("PORT-SCANNING")
 print(p)
@@ -100,7 +100,7 @@ else:
     print(Fore.RED+"[-] Looks like no ports are open") 
 
 print(Fore.WHITE+"---------------END OF PORT SCANNING-----------------")
-print(FORE.CYAN + "[*-*] Starting NIRO in SSH Brute force mode ...")
+print(Fore.CYAN + "[*-*] Starting NIRO in SSH Brute force mode ...")
 
 b = pyfiglet.figlet_format("SSH BruteForce")
 print(b)
