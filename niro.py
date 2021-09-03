@@ -1,5 +1,6 @@
 import pyfiglet
-import socket,requests,datetime
+import socket,requests
+from datetime import datetime
 import os,sys
 import paramiko
 from colorama import Fore
@@ -22,7 +23,7 @@ print(Fore.YELLOW + "+ Type     :            SUBDOMAIN,search DIRECTORY ,PORT sc
 print(Fore.WHITE + "---------------------------------------------------------------------------------------")
 print("************************************************")
 print("\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/")
-print(FORE.CYAN + "[*-*] Starting NIRO in SUBDOMAIN enumeration mode ...")
+print(Fore.CYAN + "[*-*] Starting NIRO in SUBDOMAIN enumeration mode ...")
 
 
 s = pyfiglet.figlet_format("SUB-DOMAIN")
@@ -43,7 +44,7 @@ for sub in subdoms:
 
 sub_list.close()
 
-print("---------------END OF SUBDOMAIN ENUMERATION-----------------")
+print(Fore.RED+"---------------END OF SUBDOMAIN ENUMERATION-----------------")
 print(FORE.CYAN+"[*-*] Starting NIRO in DIRECTORY enumeration mode ...")
 
 d = pyfiglet.figlet_format("DIRECTORY")
