@@ -15,6 +15,7 @@ from colorama import Fore
 sys.path.append("..")
 
 from niroIntro import welcome
+from Recon import whois_enum4linux
 from Recon import sub_domains
 from Recon import Enum_directory
 from Recon import scan_ports_tcp
@@ -25,6 +26,7 @@ from passwordSpraying.ftp_spraying import ftp_sprayingg,ftp_login
 def Program():
 
             welcome()
+            whois_enum4linux()
             sub_domains()
             Enum_directory()
             scan_ports_tcp()
