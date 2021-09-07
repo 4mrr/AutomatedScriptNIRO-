@@ -12,8 +12,9 @@ def whois_enum4linux():
  
   p = pyfiglet.figlet_format("WHOIS")
   print(Fore.MAGENTA+p)
- 
-  os.system("whois "+sys.argv[1])
+  print(Fore.YELLOW+"")
+  
+  os.system("whois "+sys.argv[1])   #run the whois command
   
   print(Fore.RED+"---------------END OF WHOIS-----------------")
   
@@ -23,7 +24,8 @@ def whois_enum4linux():
   
   p = pyfiglet.figlet_format("WHOIS")
   print(Fore.MAGENTA+p)
-
-  os.system("enum4linux -a "+sys.argv[1])
+  print(Fore.YELLOW+"")
+  
+  os.system("enum4linux -a "+sys.argv[1])   #run the "enum4linux -a" command
   
   print(Fore.RED+"---------------END OF Enum4linux-----------------")
