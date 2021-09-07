@@ -9,8 +9,6 @@ def welcome():
 	intro1 = pyfiglet.figlet_format("--->\\NIRO/<---")
 	print(Fore.RED + intro1)
 
-	intro2 = pyfiglet.figlet_format("Authored by EN-NIARI AMR \nFramed By EL MOSTAPHA CHAKIR" , font="digital")
-	print(Fore.CYAN + intro2)
 
 	now =datetime.now()
 	dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
