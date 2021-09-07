@@ -29,7 +29,7 @@ def Enum_directory():
      else:
         print(Fore.GREEN+"[+] ---> Valid Directory : ",dir_enum)
 
-   directory.close()
+   
  else :
     print(Fore.RED+"[-] INVALID FILE")
 
