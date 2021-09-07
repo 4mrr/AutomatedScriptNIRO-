@@ -66,16 +66,26 @@ python3 niro.py <IP Target>
 ```
 # :fire: Features :fire:
 
-### SUBDOMAINS
-### SEARCH DIRECTORY ONLINE OF WEB
-### PORT SCANNING
-### PASSWORD SPRYING
-#### SSH Brute Force
-#### FTP Brute Force
+* WHOIS
+* enum4linux
+* SUBDOMAINS
+* SEARCH DIRECTORY ONLINE OF WEB
+* PORT SCANNING
+* PASSWORD SPRYING
+[+] SSH Brute Force
+[+] FTP Brute Force
 
 # :boom: Simple Usage :boom:
 
 there's some pictures of NIRO :
+
+* Whois
+
+![Screenshot (800)](https://user-images.githubusercontent.com/65505262/132423381-bff536b3-1153-4cb6-9499-9b625ba35c5b.png)
+
+* enum4linux
+
+![Screenshot (801)](https://user-images.githubusercontent.com/65505262/132423417-ac28c407-42ae-4067-b3f0-8b35965906c8.png)
 
 * Sub domain :
 
