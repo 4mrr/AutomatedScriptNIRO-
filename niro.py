@@ -15,6 +15,9 @@ from colorama import Fore
 sys.path.append("..")
 
 #The libraries I used
+#---> The library Recon is about functions of footprinting & reconnaissance
+#---> The library passwordSpraying is about brute force attack (FTP & SSH)
+
 
 from niroIntro import welcome
 from Recon import whois_enum4linux
