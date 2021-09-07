@@ -3,7 +3,10 @@
 #  This program is free software; you can redistribute it and/or modify
 #  it.
 #
-#  Author: EN-NIARI AMR
+#  Authored By : EN-NIARI AMR
+#  Framed By   : EL MOSTAPHA CHAKIR
+
+
 
 import os
 import sys
