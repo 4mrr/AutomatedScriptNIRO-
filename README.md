@@ -51,7 +51,10 @@ depending on the version of the machine used
 
 and then download the script with the command line linux :
 ```bash
-wget https://raw.githubusercontent.com/amr-en-niari/AutomatedScriptNIRO-/main/niro.py
+git clone https://github.com/amr-en-niari/AutomatedScriptNIRO-.git
+cd AutomatedScriptNIRO-/
+python3 requirement.py
+python3 niro.py <Target IP>
 ```
 and you can download also the wordlist of subdomains and directory by the command line linux for using them in the script or use another wordlist :
 ```bash
