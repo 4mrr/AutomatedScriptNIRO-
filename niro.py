@@ -20,7 +20,7 @@ sys.path.append("..")
 
 
 from niroIntro import welcome
-from Recon import whois_enum4linux
+from Recon import tools_recon
 from Recon import sub_domains
 from Recon import Enum_directory
 from Recon import scan_ports_tcp
@@ -31,7 +31,7 @@ from passwordSpraying.ftp_spraying import ftp_sprayingg,ftp_login
 def Program():
 
             welcome()                 #call the welcome function, it's about the logo of NIRO
-            whois_enum4linux()        #call whois and enum4linux tools of kali linux for more informations  
+            tools_recon()             #call some of tools of kali linux for more informations (whois/enum4linux/dmitry/nikto ...)  
             sub_domains()             #call function of search sub-domains  
             Enum_directory()          #call function of search directory
             scan_ports_tcp()          #call function of port scanning
