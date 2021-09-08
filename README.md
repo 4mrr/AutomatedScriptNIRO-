@@ -15,7 +15,7 @@ Inspired By : ReconFTW & Black-Dragon & SN1PER </br>
 
 it is used in the phase of Footprinting & reconnaissance.
  
-* NIRO uses lot of tactiques for reconnaissance for example : subdomain enumeration and search directory and ports scanning which helps you getting the maximum and the most interesting subdomains and directory so that you be ahead of the competition.<\br>
+* NIRO uses lot of tactiques for reconnaissance for example : subdomain enumeration and search directory and ports scanning which helps you getting the maximum and the most interesting subdomains and directory so that you be ahead of the competition.
 
 * NIRO also use WHOIS and Enum4linux tools of linux in order to properly collect information. 
 
