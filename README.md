@@ -68,6 +68,8 @@ python3 niro.py <IP Target>
 
 * WHOIS
 * enum4linux
+* Nikto
+* Dmitry
 * SUBDOMAINS
 * SEARCH DIRECTORY ONLINE OF WEB
 * PORT SCANNING
