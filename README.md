@@ -32,7 +32,7 @@ it is used in the phase of Footprinting & reconnaissance.
 So, what are you waiting for Go Go Go!  :boom:
 
 
-# 💿 Installation 💿 :
+# 💿 Installation & Usage 💿 :
 **Niro** is a script of python3, so first of all you have to download python version > 3 :
 
 ```bash
@@ -49,7 +49,10 @@ sudo apt-get install python3.8
 ```
 depending on the version of the machine used
 
-and then download the script with the command line linux :
+and then download the script with the command line linux :<\br>
+Note: *To use tools of niro you should to download them by  **requirement.py**: `python3 requirement.py`*
+
+**All in one:**
 ```bash
 git clone https://github.com/amr-en-niari/AutomatedScriptNIRO-.git
 cd AutomatedScriptNIRO-/
