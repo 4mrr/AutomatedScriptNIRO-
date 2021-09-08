@@ -49,7 +49,7 @@ sudo apt-get install python3.8
 ```
 depending on the version of the machine used
 
-and then download the script with the command line linux :<\br>
+and then download the script with the command line linux :</br>
 Note: *To use tools of niro you should to download them by  **requirement.py**: `python3 requirement.py`*
 
 **All in one:**
