@@ -89,15 +89,24 @@ python3 niro.py <IP Target>
 
 there's some pictures of NIRO :
 
-* NIKTO
+* NMAP :
+
+![Screenshot (806)](https://user-images.githubusercontent.com/65505262/132874092-b76c583d-4a1d-4e01-8c9b-e846a6ba8ab6.png)
+
+
+* NIKTO :
 
 ![Screenshot (803)](https://user-images.githubusercontent.com/65505262/132867987-c591192f-b187-4259-b93b-c448cb1f0068.png)
 
-*  Whois
+*  Whois :
 
 ![Screenshot (800)](https://user-images.githubusercontent.com/65505262/132423381-bff536b3-1153-4cb6-9499-9b625ba35c5b.png)
 
-* enum4linux
+* WaW00f :
+
+![Screenshot (805)](https://user-images.githubusercontent.com/65505262/132874035-925f05dc-d881-40fb-b6db-5d637d9aa366.png)
+
+* enum4linux :
 
 ![Screenshot (801)](https://user-images.githubusercontent.com/65505262/132423417-ac28c407-42ae-4067-b3f0-8b35965906c8.png)
 
