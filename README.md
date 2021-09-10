@@ -73,6 +73,7 @@ python3 niro.py <IP Target>
 # :fire: Features :fire:
 
 * WHOIS
+* NMAP for vulnerabilities scanning
 * enum4linux
 * Nikto
 * Dmitry
