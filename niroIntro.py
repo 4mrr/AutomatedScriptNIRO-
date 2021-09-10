@@ -17,6 +17,6 @@ def welcome():
 	print("---------------------------------------------------------------------------------------")
 	print(Fore.YELLOW + "+ URL      :            http://"+sys.argv[1])
 	print(Fore.YELLOW + "+ Time     :            "+ dt_string)
-	print(Fore.YELLOW + "+ Type     :            SUBDOMAIN,search DIRECTORY ,PORT scanning, Passwords SPRAYING  ")
+	print(Fore.YELLOW + "+ Type     :            Information gathering  ")
 	print(Fore.WHITE + "---------------------------------------------------------------------------------------")
 	print("************************************************")
