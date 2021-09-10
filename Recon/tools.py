@@ -63,6 +63,20 @@ def tools_recon():
   
   print(Fore.RED+"---------------END OF Dmitry-----------------")
   
+  #*****************************run the tool NMAP *******************************
+  
+  print(Fore.CYAN+"===========================================================")
+  print(Fore.WHITE + "[*-*] Starting NIRO with NMAP vuln scan ...")
+  print(Fore.CYAN+"===========================================================")
+  
+  p = pyfiglet.figlet_format("Nmap")
+  print(Fore.MAGENTA+p)
+  print(Fore.YELLOW+"")
+  
+  os.system("nmap -sV --script vuln  "+sys.argv[1])   
+  
+  print(Fore.RED+"---------------END OF NMAP-----------------")
+  
   #*****************************run the tool WAFW00F *******************************
   
   print(Fore.CYAN+"===========================================================")
