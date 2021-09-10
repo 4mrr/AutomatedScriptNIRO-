@@ -89,7 +89,11 @@ python3 niro.py <IP Target>
 
 there's some pictures of NIRO :
 
-* Whois
+* NIKTO
+
+![Screenshot (803)](https://user-images.githubusercontent.com/65505262/132867987-c591192f-b187-4259-b93b-c448cb1f0068.png)
+
+*  Whois
 
 ![Screenshot (800)](https://user-images.githubusercontent.com/65505262/132423381-bff536b3-1153-4cb6-9499-9b625ba35c5b.png)
 
