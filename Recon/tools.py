@@ -86,3 +86,13 @@ def tools_recon():
   os.system("wafw00f -a -v "+sys.argv[1])
   
   print(Fore.RED+"---------------END OF waffW00f-----------------")
+  
+   #*****************************run the tool TheHarvester *******************************
+  
+  print(Fore.CYAN+"===========================================================")
+  print(Fore.WHITE + "[*-*] Starting NIRO with TheHarvester recon ...")
+  print(Fore.CYAN+"===========================================================")
+  
+  os.system("theHarvester -d "+sys.argv[1]+" -l 500 -b all")
+  
+  print(Fore.RED+"---------------END OF TheHarvester-----------------") 
