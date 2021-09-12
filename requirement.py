@@ -25,6 +25,10 @@ try :
  os.system("sudo apt-get install wafw00f")
  
  
+ print(Fore.BLUE+"\n[+] Installing TheHarvester : ")
+ print(Fore.WHITE+"")
+ os.system("sudo apt-get install theharvester")
+ 
  
  print(Fore.GREEN+"[+] DONE")
 except:
