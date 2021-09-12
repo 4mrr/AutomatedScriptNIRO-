@@ -15,7 +15,7 @@ it is used in the phase of Footprinting & reconnaissance.
  
 * NIRO uses lot of tactiques for reconnaissance for example : subdomain enumeration and search directory and ports scanning which helps you getting the maximum and the most interesting subdomains and directory so that you be ahead of the competition.
 
-* NIRO also use NMAP, WHOIS, Enum4linux, Dmitry, Nikto and WafW00f tools of linux in order to properly collect information. 
+* NIRO also use NMAP, WHOIS, Enum4linux, Dmitry, Nikto, WafW00f and TheHarvester tools of linux in order to properly collect information. 
 
 * NIRO is intended to be a speedy, massively parallel, modular, login brute-forcer.The goal is to support two services that allow remote authentication as possible :
 
@@ -76,6 +76,7 @@ python3 niro.py <IP Target>
 * Nikto
 * Dmitry
 * WafW00f detection
+* The Harvester tool
 * SUBDOMAINS
 * SEARCH DIRECTORY ONLINE OF WEB
 * PORT SCANNING
